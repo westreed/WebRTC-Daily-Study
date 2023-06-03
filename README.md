@@ -12,7 +12,7 @@ Install하는 라이브러리 분석.
 
 1. @daily-co/daily-react와 @daily-co/daily-js 로 나뉘는 이유
 
-@daily-co/daily-js와 recoil을 별도로 설치하는 이유는 그들이 서로 의존성(dependency) 관계에 있기 때문입니다. 이렇게 함으로써 daily-react 외에 recoil이나 daily-js를 사용하여 자체 호출 객체(call object)를 만들고 싶다면, 수동으로 사용하는 부분과 daily-react가 각 라이브러리의 동일한 버전을 사용할 수 있도록 보장할 수 있습니다.
+Daily React는 React로 사용자 정의 Daily 애플리케이션을 구축할 때 일반적인 패턴을 처리하기 위한 도우미 라이브러리입니다. Daily React를 사용하면 상태를 관리하고 daily-js의 메서드와 이벤트를 어떤 React 앱에서든 쉽게 통합할 수 있습니다.
 
 2. recoil
 
