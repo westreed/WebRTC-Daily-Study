@@ -179,6 +179,7 @@ export default function App() {
   const showCall = [STATE_JOINING, STATE_JOINED, STATE_ERROR].includes(
     appState
   );
+  // 이 코드는 주어진 appState가 STATE_JOINING, STATE_JOINED, STATE_ERROR 중 하나인지 확인하는 조건문입니다. includes() 메서드를 사용하여 배열에 해당 값이 있는지 확인합니다. appState가 STATE_JOINING, STATE_JOINED, STATE_ERROR 중 하나에 해당하는 경우에는 showCall 변수에 true가 할당됩니다.
 
   /**
    * Only enable the call buttons (camera toggle, leave call, etc.) if we're joined
@@ -212,6 +213,8 @@ export default function App() {
         // is the best choice. But for larger apps with deeply-nested components
         // that want to access call object state and bind event listeners to the
         // call object, this can be a helpful pattern.
+
+        // CallObjectContext는 생성된 React Context로, value로 callObject를 받아서 하위 컴포넌트에게 전달함.
         <CallObjectContext.Provider value={callObject}>
           <Call roomUrl={roomUrl} />
           <Tray

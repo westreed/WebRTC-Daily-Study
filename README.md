@@ -19,6 +19,14 @@ Daily React는 React로 사용자 정의 Daily 애플리케이션을 구축할 �
 React 전용으로 만들어진 State Management Library. 유사한 라이브러리 중 가장 유명한 건 Redux가 있습니다. 이러한 상태관리 라이브러리가 쓰이는 이유는 React에서는 `Global State`를 선언할 수 없는데 이를 해결해주는 라이브러리입니다.
 > [유튜브 참고](https://www.youtube.com/watch?v=t934FOlOMoM)
 
+## 구조
+```bash
+index.js -> App.js -> 방생성여부 ? Call, Tray 컴포넌트 : StartButton 컴포넌트
+
+Call -> 웹캠비디오와 오디오, 화면공유 등을 관리
+Tray -> 하단 메뉴바
+```
+
 ## 여담
 
 1. React에서 .env로 환경변수를 가져올 때 주의할 점
