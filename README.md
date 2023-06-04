@@ -27,6 +27,27 @@ Call -> 웹캠비디오와 오디오, 화면공유 등을 관리
 Tray -> 하단 메뉴바
 ```
 
+- StartButton에서 참가버튼을 누르면, App.js의 createCall()함수가 작동하고
+- 생성된 방url을 startJoiningCall(url)에 넘겨준다.
+- url이 정상일 때, callObject를 생성하고,
+- appState가 STATE_JOINING으로 바뀌면서 화상통화모드로 바뀜.
+
+## API
+
+POST요청  
+url : https://api.daily.co/v1/rooms  
+header Authorization에는 API Token값을 넣어주면 됨.
+
+```json
+{
+    properties: {
+        exp: exp,
+    },
+}
+```
+
+body는 Json 형태로 생성된 방이 만료되는 시간을 명시해줘야한다.
+
 ## 여담
 
 1. React에서 .env로 환경변수를 가져올 때 주의할 점

@@ -18,7 +18,6 @@ async function createRoom() {
       exp: exp,
     },
   };
-  console.log('Bearer ' + process.env.REACT_APP_DAILY_API_KEY);
   let response = await fetch(newRoomEndpoint, {
       method: 'POST',
       body: JSON.stringify(options),
