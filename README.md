@@ -40,8 +40,8 @@ header Authorization에는 API Token값을 넣어주면 됨.
 
 ```json
 {
-    properties: {
-        exp: exp,
+    "properties": {
+        "exp": "exp",
     },
 }
 ```
