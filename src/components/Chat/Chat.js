@@ -2,6 +2,7 @@ import React, { useContext, useState, useEffect } from 'react';
 import CallObjectContext from '../../CallObjectContext';
 import './Chat.css';
 
+
 export default function Chat(props) {
   const callObject = useContext(CallObjectContext);
   const [inputValue, setInputValue] = useState('');

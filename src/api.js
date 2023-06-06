@@ -14,9 +14,16 @@ const newRoomEndpoint = `https://api.daily.co/v1/rooms`;
 async function createRoom() {
   const exp = Math.round(Date.now() / 1000) + 60 * 30;
   const options = {
-    properties: {
-      exp: exp,
-    },
+      //name:"RoomName",
+      privacy:"public", // Options : public, private
+      properties: {
+          exp: exp,
+          max_participants:4, // 최대 참가인원수
+          enable_people_ui:true,
+          enable_prejoin_ui:true,
+          enable_network_ui:true,
+          enable_screenshare:true // Default: true
+      }
   };
   let response = await fetch(newRoomEndpoint, {
       method: 'POST',
@@ -29,6 +36,24 @@ async function createRoom() {
     }),
     room = await response.json();
   return room;
+  /*
+  return value
+  {
+      "id": "RoomId",
+      "name": "RoomName",
+      "api_created": true,
+      "privacy": "private",
+      "url": "https://westreed.daily.co/RoomUrl",
+      "created_at": "2023-06-06T07:53:59.000Z",
+      "config": {
+          "exp": 1686039838,
+          "max_participants": 4,
+          "enable_network_ui": true,
+          "enable_prejoin_ui": true,
+          "enable_people_ui": true
+      }
+  }
+  */
 
   // Comment out the above and uncomment the below, using your own URL
   // 자신의 URL을 사용하여 위의 주석을 제거하고 아래의 주석을 제거하십시오.
